@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bincontrol : MonoBehaviour {
+public class bincontrol : MonoBehaviour
+{
     public Transform bottombunObj;
     public Transform topbunObj;
     public Transform burgerObj;
@@ -13,13 +14,13 @@ public class bincontrol : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnMouseDown()
     {
@@ -65,8 +66,25 @@ public class bincontrol : MonoBehaviour {
                 Instantiate(burgerObj, new Vector2(7, -2.24f), burgerObj.rotation);
                 gameplay.grillS3 = "full";
             }
+            }
+        if (gameObject.name == "hotdog bin")
+        {
+            if (gameplay.grillS1 == "empty")
             {
-                
+                Instantiate(hotdogObj, new Vector2(5, -1.03f), hotdogObj.rotation);
+                gameplay.grillS1 = "full";
+            }
+            else
+                if (gameplay.grillS2 == "empty")
+            {
+                Instantiate(hotdogObj, new Vector2(7, -1.03f), hotdogObj.rotation);
+                gameplay.grillS2 = "full";
+            }
+            else
+                if (gameplay.grillS3 == "empty")
+            {
+                Instantiate(hotdogObj, new Vector2(7, -2.24f), hotdogObj.rotation);
+                gameplay.grillS3 = "full";
             }
         }
     }
