@@ -31,6 +31,7 @@ public class bincontrol : MonoBehaviour
                 Instantiate(bottombunObj, new Vector2(-1, -0.8f), bottombunObj.rotation);
                 Instantiate(topbunObj, new Vector2(-1, -0.6f), topbunObj.rotation);
                 gameplay.cuttingboardS1 = "justbun";
+                gameplay.SelectedSlot = 1;
             }
             else
             if (gameplay.cuttingboardS2 == "empty")
@@ -38,6 +39,7 @@ public class bincontrol : MonoBehaviour
                 Instantiate(bottombunObj, new Vector2(1, -0.8f), bottombunObj.rotation);
                 Instantiate(topbunObj, new Vector2(1, -0.6f), topbunObj.rotation);
                 gameplay.cuttingboardS2 = "justbun";
+                gameplay.SelectedSlot = 2;
             }
             else
             if (gameplay.cuttingboardS3 == "empty")
@@ -45,6 +47,7 @@ public class bincontrol : MonoBehaviour
                 Instantiate(bottombunObj, new Vector2(0, -2f), bottombunObj.rotation);
                 Instantiate(topbunObj, new Vector2(0, -1.80f), topbunObj.rotation);
                 gameplay.cuttingboardS3 = "justbun";
+                gameplay.SelectedSlot = 3;
             }
         }
         if (gameObject.name == "hamburgers")

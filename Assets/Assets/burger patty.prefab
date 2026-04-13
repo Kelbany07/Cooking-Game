@@ -133,3 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 827713cd80de0504287dda58295a2463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cookingTime: 0
+  occupiedSlot: 100
