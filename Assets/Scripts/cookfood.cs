@@ -29,7 +29,11 @@ public class cookfood : MonoBehaviour
     {
         if (gameplay.cuttingboardS1 == "justbun")
         {
-            GetComponent<Transform>().position = new Vector2(-1, -0.8f);
+            if (transform.position.x == 5)
+            {
+                gameplay.grillS1 = "empty";
+            }
+                GetComponent<Transform>().position = new Vector2(-1, -0.8f);
             gameplay.cuttingboardS1 = "fullbun";
         }
         else
