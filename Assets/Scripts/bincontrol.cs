@@ -30,21 +30,21 @@ public class bincontrol : MonoBehaviour
             {
                 Instantiate(bottombunObj, new Vector2(-1, -0.8f), bottombunObj.rotation);
                 Instantiate(topbunObj, new Vector2(-1, -0.6f), topbunObj.rotation);
-                gameplay.cuttingboardS1 = "full";
+                gameplay.cuttingboardS1 = "justbun";
             }
             else
             if (gameplay.cuttingboardS2 == "empty")
             {
                 Instantiate(bottombunObj, new Vector2(1, -0.8f), bottombunObj.rotation);
                 Instantiate(topbunObj, new Vector2(1, -0.6f), topbunObj.rotation);
-                gameplay.cuttingboardS2 = "full";
+                gameplay.cuttingboardS2 = "justbun";
             }
             else
             if (gameplay.cuttingboardS3 == "empty")
             {
                 Instantiate(bottombunObj, new Vector2(0, -2f), bottombunObj.rotation);
                 Instantiate(topbunObj, new Vector2(0, -1.80f), topbunObj.rotation);
-                gameplay.cuttingboardS3 = "full";
+                gameplay.cuttingboardS3 = "justbun";
             }
         }
         if (gameObject.name == "hamburgers")
