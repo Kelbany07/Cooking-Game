@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 82b4586fb2d1fad41b3ff4987af9a6ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 6026410712982167726}
   - component: {fileID: 7125881548020744239}
   - component: {fileID: 3336111721295152856}
-  - component: {fileID: -4680690667391633366}
+  - component: {fileID: 1129952728971079871}
   m_Layer: 0
   m_Name: Strawberry_Pancakes
   m_TagString: Pancake
@@ -280,7 +280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8835376484083013456}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.018154075, w: 0.99983525}
+  m_LocalRotation: {x: 0, y: 0, z: 0.018150423, w: 0.9998353}
   m_LocalPosition: {x: 0.015815645, y: -3.549545, z: 0}
   m_LocalScale: {x: 0.5003264, y: 0.50905764, z: 1}
   m_ConstrainProportionsScale: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   returnOnRelease: 1
   returnDuration: 0.2
---- !u!50 &-4680690667391633366
+--- !u!50 &1129952728971079871
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

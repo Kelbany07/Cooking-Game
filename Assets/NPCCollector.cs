@@ -27,9 +27,11 @@ public class NPCCollector : MonoBehaviour
     [Header("Audio")]
     [Tooltip("Sound played when this NPC collects an accepted pancake")]
     public AudioClip collectClip;
-    [Range(0f, 1f)]
-    [Tooltip("Volume used for the collect sound")]
+    [Range(0f, 2f)]
+    [Tooltip("Volume used for the collect sound (1 = original). If an AudioSource is assigned, values >1 amplify.")]
     public float collectVolume = 1f;
+    [Tooltip("Optional AudioSource on the NPC. If assigned, PlayOneShot is used (preferred).")]
+    public AudioSource audioSource;
 
     [Header("Animation")]
     [Tooltip("Animator controlling this NPC's animations (assign the NPC's Animator)")]
@@ -71,10 +73,19 @@ public class NPCCollector : MonoBehaviour
             timer.Restart();
         }
 
-        // Play collect sound (one-shot at NPC position)
+        // Play collect sound:
+        // - If an AudioSource is assigned, use PlayOneShot (respects AudioSource settings and allows >1 multiplier).
+        // - Otherwise fall back to PlayClipAtPoint (volume clamped 0..1).
         if (collectClip != null)
         {
-            AudioSource.PlayClipAtPoint(collectClip, transform.position, collectVolume);
+            if (audioSource != null)
+            {
+                audioSource.PlayOneShot(collectClip, Mathf.Clamp(collectVolume, 0f, 10f));
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(collectClip, transform.position, Mathf.Clamp01(collectVolume));
+            }
         }
 
         // Play the "Get" animation only when an accepted pancake is collected.
